@@ -84,6 +84,7 @@ img {
   color: #2e2f42;
   padding: 24px 0;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-nav-link:hover,
@@ -91,6 +92,21 @@ img {
   color: #404bbf;
 }
 
+.current {
+  position: relative;
+  color: #404bbf;
+}
+
+.current::after {
+  content: "";
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}
 .header-address {
   font-style: normal;
   margin-left: auto;
@@ -106,6 +122,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address-link:hover,
